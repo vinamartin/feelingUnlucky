@@ -21,6 +21,13 @@ public class Game {
         return gameOver;
     }
 
+    int getCurrentFrame() {
+        if(frames.get(frames.size()-1).getStatus() != FrameType.INCOMPLETE) {
+            return frames.size()+1;
+        }
+        return frames.size();
+    }
+
     void rollBall(int pins) throws TooManyPinsException {
         rolls.add(pins);
         Frame currentFrame = frames.get(frames.size()-1);

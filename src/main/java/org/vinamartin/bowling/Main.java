@@ -18,6 +18,7 @@ public class Main {
 
         do {
             try {
+                System.out.println("Now Bowling: Frame #" + game.getCurrentFrame());
                 game.rollBall(scanner.nextInt());
                 System.out.println("Total Score (up to last complete frame): " + game.getNearestScore());
             } catch (TooManyPinsException e) {
